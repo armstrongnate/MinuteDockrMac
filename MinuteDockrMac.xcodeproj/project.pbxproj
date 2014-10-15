@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D8155219ECEE2F00612786 /* PopoverView.xib */; };
+		43D8155619ECF69D00612786 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D8155519ECF69D00612786 /* PopoverViewController.m */; };
+		43FF92E819EA18F200435D05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF92E719EA18F200435D05 /* AppDelegate.m */; };
+		43FF92EA19EA18F200435D05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF92E919EA18F200435D05 /* main.m */; };
+		43FF92EC19EA18F200435D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43FF92EB19EA18F200435D05 /* Images.xcassets */; };
+		43FF92EF19EA18F200435D05 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF92ED19EA18F200435D05 /* MainMenu.xib */; };
+		43FF92FB19EA18F200435D05 /* MinuteDockrMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF92FA19EA18F200435D05 /* MinuteDockrMacTests.m */; };
+		43FF930619EA198E00435D05 /* MinuteDockClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF930519EA198E00435D05 /* MinuteDockClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43FF92F519EA18F200435D05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43FF92D919EA18F200435D05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43FF92E019EA18F200435D05;
+			remoteInfo = MinuteDockrMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43D8155219ECEE2F00612786 /* PopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverView.xib; sourceTree = "<group>"; };
+		43D8155419ECF69D00612786 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		43D8155519ECF69D00612786 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		43FF92E119EA18F200435D05 /* MinuteDockrMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinuteDockrMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FF92E519EA18F200435D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43FF92E619EA18F200435D05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		43FF92E719EA18F200435D05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43FF92E919EA18F200435D05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43FF92EB19EA18F200435D05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43FF92EE19EA18F200435D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		43FF92F419EA18F200435D05 /* MinuteDockrMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinuteDockrMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FF92F919EA18F200435D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43FF92FA19EA18F200435D05 /* MinuteDockrMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinuteDockrMacTests.m; sourceTree = "<group>"; };
+		43FF930419EA198E00435D05 /* MinuteDockClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinuteDockClient.h; sourceTree = "<group>"; };
+		43FF930519EA198E00435D05 /* MinuteDockClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinuteDockClient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43FF92DE19EA18F200435D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FF92F119EA18F200435D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43FF92D819EA18F200435D05 = {
+			isa = PBXGroup;
+			children = (
+				43FF92E319EA18F200435D05 /* MinuteDockrMac */,
+				43FF92F719EA18F200435D05 /* MinuteDockrMacTests */,
+				43FF92E219EA18F200435D05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43FF92E219EA18F200435D05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43FF92E119EA18F200435D05 /* MinuteDockrMac.app */,
+				43FF92F419EA18F200435D05 /* MinuteDockrMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43FF92E319EA18F200435D05 /* MinuteDockrMac */ = {
+			isa = PBXGroup;
+			children = (
+				43FF92E619EA18F200435D05 /* AppDelegate.h */,
+				43FF92E719EA18F200435D05 /* AppDelegate.m */,
+				43FF930419EA198E00435D05 /* MinuteDockClient.h */,
+				43FF930519EA198E00435D05 /* MinuteDockClient.m */,
+				43FF92EB19EA18F200435D05 /* Images.xcassets */,
+				43FF92ED19EA18F200435D05 /* MainMenu.xib */,
+				43D8155419ECF69D00612786 /* PopoverViewController.h */,
+				43D8155519ECF69D00612786 /* PopoverViewController.m */,
+				43FF92E419EA18F200435D05 /* Supporting Files */,
+			);
+			path = MinuteDockrMac;
+			sourceTree = "<group>";
+		};
+		43FF92E419EA18F200435D05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43FF92E519EA18F200435D05 /* Info.plist */,
+				43FF92E919EA18F200435D05 /* main.m */,
+				43D8155219ECEE2F00612786 /* PopoverView.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43FF92F719EA18F200435D05 /* MinuteDockrMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				43FF92FA19EA18F200435D05 /* MinuteDockrMacTests.m */,
+				43FF92F819EA18F200435D05 /* Supporting Files */,
+			);
+			path = MinuteDockrMacTests;
+			sourceTree = "<group>";
+		};
+		43FF92F819EA18F200435D05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43FF92F919EA18F200435D05 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43FF92E019EA18F200435D05 /* MinuteDockrMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43FF92FE19EA18F200435D05 /* Build configuration list for PBXNativeTarget "MinuteDockrMac" */;
+			buildPhases = (
+				43FF92DD19EA18F200435D05 /* Sources */,
+				43FF92DE19EA18F200435D05 /* Frameworks */,
+				43FF92DF19EA18F200435D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinuteDockrMac;
+			productName = MinuteDockrMac;
+			productReference = 43FF92E119EA18F200435D05 /* MinuteDockrMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43FF92F319EA18F200435D05 /* MinuteDockrMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43FF930119EA18F200435D05 /* Build configuration list for PBXNativeTarget "MinuteDockrMacTests" */;
+			buildPhases = (
+				43FF92F019EA18F200435D05 /* Sources */,
+				43FF92F119EA18F200435D05 /* Frameworks */,
+				43FF92F219EA18F200435D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43FF92F619EA18F200435D05 /* PBXTargetDependency */,
+			);
+			name = MinuteDockrMacTests;
+			productName = MinuteDockrMacTests;
+			productReference = 43FF92F419EA18F200435D05 /* MinuteDockrMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43FF92D919EA18F200435D05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nate Armstrong";
+				TargetAttributes = {
+					43FF92E019EA18F200435D05 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					43FF92F319EA18F200435D05 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 43FF92E019EA18F200435D05;
+					};
+				};
+			};
+			buildConfigurationList = 43FF92DC19EA18F200435D05 /* Build configuration list for PBXProject "MinuteDockrMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43FF92D819EA18F200435D05;
+			productRefGroup = 43FF92E219EA18F200435D05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43FF92E019EA18F200435D05 /* MinuteDockrMac */,
+				43FF92F319EA18F200435D05 /* MinuteDockrMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43FF92DF19EA18F200435D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43FF92EC19EA18F200435D05 /* Images.xcassets in Resources */,
+				43FF92EF19EA18F200435D05 /* MainMenu.xib in Resources */,
+				43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FF92F219EA18F200435D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43FF92DD19EA18F200435D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D8155619ECF69D00612786 /* PopoverViewController.m in Sources */,
+				43FF930619EA198E00435D05 /* MinuteDockClient.m in Sources */,
+				43FF92EA19EA18F200435D05 /* main.m in Sources */,
+				43FF92E819EA18F200435D05 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FF92F019EA18F200435D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43FF92FB19EA18F200435D05 /* MinuteDockrMacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43FF92F619EA18F200435D05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43FF92E019EA18F200435D05 /* MinuteDockrMac */;
+			targetProxy = 43FF92F519EA18F200435D05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43FF92ED19EA18F200435D05 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43FF92EE19EA18F200435D05 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43FF92FC19EA18F200435D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		43FF92FD19EA18F200435D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43FF92FF19EA18F200435D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MinuteDockrMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43FF930019EA18F200435D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MinuteDockrMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		43FF930219EA18F200435D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MinuteDockrMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinuteDockrMac.app/Contents/MacOS/MinuteDockrMac";
+			};
+			name = Debug;
+		};
+		43FF930319EA18F200435D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MinuteDockrMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinuteDockrMac.app/Contents/MacOS/MinuteDockrMac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43FF92DC19EA18F200435D05 /* Build configuration list for PBXProject "MinuteDockrMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FF92FC19EA18F200435D05 /* Debug */,
+				43FF92FD19EA18F200435D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43FF92FE19EA18F200435D05 /* Build configuration list for PBXNativeTarget "MinuteDockrMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FF92FF19EA18F200435D05 /* Debug */,
+				43FF930019EA18F200435D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43FF930119EA18F200435D05 /* Build configuration list for PBXNativeTarget "MinuteDockrMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FF930219EA18F200435D05 /* Debug */,
+				43FF930319EA18F200435D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43FF92D919EA18F200435D05 /* Project object */;
+}

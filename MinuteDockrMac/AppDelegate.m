@@ -25,35 +25,40 @@
   [self setupStatusItem];
   [self getCurrentEntry:nil];
 
+  self.detachedWindow.contentView = self.detachedWindowViewController.view;
+
   NSTimeInterval ti = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MDCurrentEntryRefreshInterval"];
   [NSTimer scheduledTimerWithTimeInterval:ti target:self selector:@selector(getCurrentEntry:) userInfo:nil repeats:YES];
 }
 
 - (void)setupStatusItem {
-  _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-  _statusItem.title = @"";
-  _statusItem.image = [NSImage imageNamed:@"status_item_image_inactive"];
-  _statusItem.highlightMode = YES;
-  [_statusItem setDoubleAction:@selector(toggleCurrentEntry:)];
+  self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+  self.statusItem.title = @"";
+  NSImage *image = [NSImage imageNamed:@"status_item"];
+  [image setTemplate:YES];
+  self.statusItem.button.image = image;
+  self.statusItem.button.action = @selector(statusItemPressed:);
+  self.statusItem.target = self;
+  self.statusItem.highlightMode = NO;
+  [self.statusItem setDoubleAction:@selector(toggleCurrentEntry:)];
 }
 
 - (void)toggleCurrentEntry:(id)sender {
   if (self.currentEntry) {
-    if ((BOOL)[self.currentEntry objectForKey:@"timer_active"]) {
-    }
+    BOOL active = [[self.currentEntry objectForKey:@"timer_active"] isEqual: @1];
+    __weak typeof(self) weakSelf = self;
+    [self.minuteDockClient setCurrentEntryActive:!active withCompletionHandler:^(NSDictionary *entry, NSError *error) {
+      weakSelf.currentEntry = entry;
+    }];
   }
 }
 
 - (void)getCurrentEntry:(id)sender {
   [self.minuteDockClient getCurrentEntryWithCompletionHandler:^(NSDictionary *entry, NSError *error) {
-    BOOL active = false;
     if (error != nil) {
       NSLog(@"Error: %@", error);
     } else {
-      NSLog(@"current entry: %@", entry);
       self.currentEntry = entry;
-      active = (BOOL)[entry objectForKey:@"timer_active"];
-      _statusItem.image = [NSImage imageNamed:active ? @"status_item_image_active" : @"status_item_image_inactive"];
     }
   }];
 }
@@ -63,6 +68,33 @@
     _minuteDockClient = [[MinuteDockClient alloc] init];
   }
   return _minuteDockClient;
+}
+
+- (void)setCurrentEntry:(NSDictionary *)currentEntry {
+  NSLog(@"current entry: %@", currentEntry);
+  _currentEntry = currentEntry;
+  BOOL active = [[currentEntry objectForKey:@"timer_active"] isEqual: @1];
+  self.statusItem.button.appearsDisabled = !active;
+}
+
+- (void)createPopover {
+  if (self.popover == nil) {
+    self.popover = [[NSPopover alloc] init];
+    self.popover.contentViewController = self.popoverViewController;
+    self.popover.animates = YES;
+    self.popover.behavior = NSPopoverBehaviorTransient;
+    self.popover.delegate = self;
+  }
+}
+
+- (void)statusItemPressed:(id)sender {
+  [self createPopover];
+  NSStatusBarButton *button = (NSStatusBarButton *)sender;
+  [self.popover showRelativeToRect:[button bounds] ofView:sender preferredEdge:NSMaxYEdge];
+}
+
+- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
+  return self.detachedWindow;
 }
 
 @end

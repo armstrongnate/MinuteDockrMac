@@ -45,7 +45,8 @@
 
 - (void)setCurrentEntryActive:(BOOL)active withCompletionHandler:(void (^)(NSDictionary *entry, NSError *error))completionHandler {
   NSURLComponents *URLComponents = [self URLComponents];
-  URLComponents.path = @"/api/v1/entries/current/start.json";
+  NSString *action = active ? @"start" : @"pause";
+  URLComponents.path = [NSString stringWithFormat:@"/api/v1/entries/current/%@.json", action];
   NSURL *URL = [URLComponents URL];
   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
   request.HTTPMethod = @"POST";
@@ -59,9 +60,6 @@
       completionHandler(nil, error);
     }
   }];
-}
-
-- (void)stopCurrentEntryWithCompletionHandler:(void (^)(NSDictionary *entry, NSError *error))completionHandler {
 }
 
 - (NSURLComponents *)URLComponents {
