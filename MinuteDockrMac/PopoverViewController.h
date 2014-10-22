@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class MDEntry;
+
 @interface PopoverViewController : NSViewController
+
+@property (nonatomic, strong) MDEntry *entry;
 
 @end

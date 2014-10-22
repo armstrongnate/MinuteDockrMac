@@ -7,14 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PopoverManager.h"
+#import "StatusItemManager.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, StatusItemManagerDelegate>
 
-@property (strong, nonatomic) NSStatusItem *statusItem;
+@property (strong, nonatomic) PopoverManager *popoverManager;
 @property (weak) IBOutlet NSWindow *detachedWindow;
-@property (weak) IBOutlet NSViewController *detachedWindowViewController;
-@property (weak) IBOutlet NSViewController *popoverViewController;
-@property (retain) NSPopover *popover;
+@property (weak) IBOutlet PopoverViewController *popoverViewController;
+@property (nonatomic, strong) StatusItemManager *statusItemManager;
 
 @end
 

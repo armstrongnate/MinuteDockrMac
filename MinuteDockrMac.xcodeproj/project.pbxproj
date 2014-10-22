@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432AE39219F5F82000F2EB36 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39119F5F82000F2EB36 /* Resource.m */; };
+		432AE39919F5FC8A00F2EB36 /* ActiveSupportInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39619F5FC8A00F2EB36 /* ActiveSupportInflector.m */; };
+		432AE39A19F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39819F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m */; };
+		432AE39D19F6070100F2EB36 /* MinuteDockCredentialStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39C19F6070100F2EB36 /* MinuteDockCredentialStorage.m */; };
+		432AE3A119F624D500F2EB36 /* ActiveSupportInflector.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432AE3A019F624D500F2EB36 /* ActiveSupportInflector.plist */; };
+		432AE3A419F637B700F2EB36 /* NSNull+Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3A319F637B700F2EB36 /* NSNull+Resource.m */; };
+		432AE3AE19F7594000F2EB36 /* StatusItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3AD19F7594000F2EB36 /* StatusItemManager.m */; };
+		432AE3B119F778EA00F2EB36 /* CurrentEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3B019F778EA00F2EB36 /* CurrentEntry.m */; };
+		43A8A0C319EE0EEF0068CCDB /* PopoverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */; };
+		43A8A0CD19EE2F270068CCDB /* MDEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A0CC19EE2F270068CCDB /* MDEntry.m */; };
 		43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D8155219ECEE2F00612786 /* PopoverView.xib */; };
 		43D8155619ECF69D00612786 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D8155519ECF69D00612786 /* PopoverViewController.m */; };
 		43FF92E819EA18F200435D05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF92E719EA18F200435D05 /* AppDelegate.m */; };
@@ -14,7 +24,6 @@
 		43FF92EC19EA18F200435D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43FF92EB19EA18F200435D05 /* Images.xcassets */; };
 		43FF92EF19EA18F200435D05 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF92ED19EA18F200435D05 /* MainMenu.xib */; };
 		43FF92FB19EA18F200435D05 /* MinuteDockrMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF92FA19EA18F200435D05 /* MinuteDockrMacTests.m */; };
-		43FF930619EA198E00435D05 /* MinuteDockClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF930519EA198E00435D05 /* MinuteDockClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +37,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		432AE39019F5F82000F2EB36 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		432AE39119F5F82000F2EB36 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
+		432AE39519F5FC8A00F2EB36 /* ActiveSupportInflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveSupportInflector.h; sourceTree = "<group>"; };
+		432AE39619F5FC8A00F2EB36 /* ActiveSupportInflector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveSupportInflector.m; sourceTree = "<group>"; };
+		432AE39719F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ActiveSupportInflector.h"; sourceTree = "<group>"; };
+		432AE39819F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ActiveSupportInflector.m"; sourceTree = "<group>"; };
+		432AE39B19F6070100F2EB36 /* MinuteDockCredentialStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinuteDockCredentialStorage.h; sourceTree = "<group>"; };
+		432AE39C19F6070100F2EB36 /* MinuteDockCredentialStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinuteDockCredentialStorage.m; sourceTree = "<group>"; };
+		432AE3A019F624D500F2EB36 /* ActiveSupportInflector.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ActiveSupportInflector.plist; sourceTree = "<group>"; };
+		432AE3A219F637B700F2EB36 /* NSNull+Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+Resource.h"; sourceTree = "<group>"; };
+		432AE3A319F637B700F2EB36 /* NSNull+Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+Resource.m"; sourceTree = "<group>"; };
+		432AE3AC19F7594000F2EB36 /* StatusItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemManager.h; sourceTree = "<group>"; };
+		432AE3AD19F7594000F2EB36 /* StatusItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemManager.m; sourceTree = "<group>"; };
+		432AE3AF19F778EA00F2EB36 /* CurrentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentEntry.h; sourceTree = "<group>"; };
+		432AE3B019F778EA00F2EB36 /* CurrentEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentEntry.m; sourceTree = "<group>"; };
+		43A8A0C119EE0EEF0068CCDB /* PopoverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverManager.h; sourceTree = "<group>"; };
+		43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverManager.m; sourceTree = "<group>"; };
+		43A8A0CB19EE2F270068CCDB /* MDEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDEntry.h; sourceTree = "<group>"; };
+		43A8A0CC19EE2F270068CCDB /* MDEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDEntry.m; sourceTree = "<group>"; };
 		43D8155219ECEE2F00612786 /* PopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverView.xib; sourceTree = "<group>"; };
 		43D8155419ECF69D00612786 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		43D8155519ECF69D00612786 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
@@ -41,8 +69,6 @@
 		43FF92F419EA18F200435D05 /* MinuteDockrMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinuteDockrMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FF92F919EA18F200435D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43FF92FA19EA18F200435D05 /* MinuteDockrMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinuteDockrMacTests.m; sourceTree = "<group>"; };
-		43FF930419EA198E00435D05 /* MinuteDockClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinuteDockClient.h; sourceTree = "<group>"; };
-		43FF930519EA198E00435D05 /* MinuteDockClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinuteDockClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +89,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432AE39419F5FC7700F2EB36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				432AE3A619F7400500F2EB36 /* ActiveSupportInflector */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		432AE3A619F7400500F2EB36 /* ActiveSupportInflector */ = {
+			isa = PBXGroup;
+			children = (
+				432AE39519F5FC8A00F2EB36 /* ActiveSupportInflector.h */,
+				432AE39619F5FC8A00F2EB36 /* ActiveSupportInflector.m */,
+				432AE39719F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.h */,
+				432AE39819F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m */,
+			);
+			name = ActiveSupportInflector;
+			sourceTree = "<group>";
+		};
 		43FF92D819EA18F200435D05 = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +129,28 @@
 		43FF92E319EA18F200435D05 /* MinuteDockrMac */ = {
 			isa = PBXGroup;
 			children = (
+				432AE39419F5FC7700F2EB36 /* Helpers */,
 				43FF92E619EA18F200435D05 /* AppDelegate.h */,
 				43FF92E719EA18F200435D05 /* AppDelegate.m */,
-				43FF930419EA198E00435D05 /* MinuteDockClient.h */,
-				43FF930519EA198E00435D05 /* MinuteDockClient.m */,
 				43FF92EB19EA18F200435D05 /* Images.xcassets */,
 				43FF92ED19EA18F200435D05 /* MainMenu.xib */,
 				43D8155419ECF69D00612786 /* PopoverViewController.h */,
 				43D8155519ECF69D00612786 /* PopoverViewController.m */,
+				43A8A0C119EE0EEF0068CCDB /* PopoverManager.h */,
+				43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */,
+				43A8A0CB19EE2F270068CCDB /* MDEntry.h */,
+				43A8A0CC19EE2F270068CCDB /* MDEntry.m */,
+				432AE3A219F637B700F2EB36 /* NSNull+Resource.h */,
+				432AE3A319F637B700F2EB36 /* NSNull+Resource.m */,
+				432AE39019F5F82000F2EB36 /* Resource.h */,
+				432AE39119F5F82000F2EB36 /* Resource.m */,
+				432AE39B19F6070100F2EB36 /* MinuteDockCredentialStorage.h */,
+				432AE39C19F6070100F2EB36 /* MinuteDockCredentialStorage.m */,
 				43FF92E419EA18F200435D05 /* Supporting Files */,
+				432AE3AC19F7594000F2EB36 /* StatusItemManager.h */,
+				432AE3AD19F7594000F2EB36 /* StatusItemManager.m */,
+				432AE3AF19F778EA00F2EB36 /* CurrentEntry.h */,
+				432AE3B019F778EA00F2EB36 /* CurrentEntry.m */,
 			);
 			path = MinuteDockrMac;
 			sourceTree = "<group>";
@@ -100,6 +158,7 @@
 		43FF92E419EA18F200435D05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				432AE3A019F624D500F2EB36 /* ActiveSupportInflector.plist */,
 				43FF92E519EA18F200435D05 /* Info.plist */,
 				43FF92E919EA18F200435D05 /* main.m */,
 				43D8155219ECEE2F00612786 /* PopoverView.xib */,
@@ -205,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43FF92EC19EA18F200435D05 /* Images.xcassets in Resources */,
+				432AE3A119F624D500F2EB36 /* ActiveSupportInflector.plist in Resources */,
 				43FF92EF19EA18F200435D05 /* MainMenu.xib in Resources */,
 				43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */,
 			);
@@ -224,10 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432AE3AE19F7594000F2EB36 /* StatusItemManager.m in Sources */,
 				43D8155619ECF69D00612786 /* PopoverViewController.m in Sources */,
-				43FF930619EA198E00435D05 /* MinuteDockClient.m in Sources */,
+				43A8A0C319EE0EEF0068CCDB /* PopoverManager.m in Sources */,
+				432AE39D19F6070100F2EB36 /* MinuteDockCredentialStorage.m in Sources */,
 				43FF92EA19EA18F200435D05 /* main.m in Sources */,
+				432AE39919F5FC8A00F2EB36 /* ActiveSupportInflector.m in Sources */,
+				432AE3B119F778EA00F2EB36 /* CurrentEntry.m in Sources */,
+				432AE3A419F637B700F2EB36 /* NSNull+Resource.m in Sources */,
+				432AE39A19F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m in Sources */,
+				432AE39219F5F82000F2EB36 /* Resource.m in Sources */,
 				43FF92E819EA18F200435D05 /* AppDelegate.m in Sources */,
+				43A8A0CD19EE2F270068CCDB /* MDEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
