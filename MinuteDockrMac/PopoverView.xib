@@ -7,7 +7,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PopoverViewController">
             <connections>
                 <outlet property="contactSelect" destination="2de-cT-DYe" id="OGu-8b-Tn6"/>
-                <outlet property="descriptionTextField" destination="9J1-PI-uZD" id="s6B-N4-gBd"/>
+                <outlet property="descriptionTextField" destination="9J1-PI-uZD" id="s8d-YN-vdK"/>
                 <outlet property="durationLabel" destination="u4v-aE-CyA" id="s0C-Nt-1fD"/>
                 <outlet property="projectSelect" destination="xjr-Zg-iPT" id="Cfj-ZD-EhS"/>
                 <outlet property="startStopButton" destination="HMY-uv-pqP" id="f1a-sI-3Wp"/>

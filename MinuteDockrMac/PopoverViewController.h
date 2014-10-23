@@ -15,5 +15,6 @@
 @property (nonatomic, strong) MDEntry *entry;
 @property (nonatomic, strong) NSArray *contacts;
 @property (nonatomic, strong) NSArray *projects;
+@property (weak) IBOutlet NSTextField *descriptionTextField;
 
 @end

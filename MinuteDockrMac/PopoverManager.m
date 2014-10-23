@@ -7,6 +7,7 @@
 //
 
 #import "PopoverManager.h"
+#import "MDEntry.h"
 
 @implementation PopoverManager
 
@@ -37,6 +38,15 @@
 
 - (void)showPopoverRelativeToRect:(NSRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(NSRectEdge)preferredEdge {
   [self.popover showRelativeToRect:positioningRect ofView:positioningView preferredEdge:preferredEdge];
+}
+
+- (void)popoverDidClose:(NSNotification *)notification {
+  PopoverViewController *popoverViewController = (PopoverViewController *)self.popover.contentViewController;
+  [popoverViewController.entry updateAttribute:@"entryDescription"
+                                     withValue:[popoverViewController.descriptionTextField stringValue]
+                                         block:^(Resource *response, NSError *error) {
+                                           // nothing
+                                         }];
 }
 
 @end

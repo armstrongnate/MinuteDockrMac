@@ -21,7 +21,6 @@
 @property (weak) IBOutlet NSPopUpButton *projectSelect;
 @property (nonatomic, copy) void (^responseHandler)(Resource *response, NSError *error);
 @property (nonatomic, strong) NSArray *filteredProjects;
-@property (weak) IBOutlet NSTextField *descriptionTextField;
 @property (weak) IBOutlet NSButton *startStopButton;
 
 @end
@@ -83,6 +82,7 @@
     [self.projectSelect selectResourceWithTag:self.entry.projectId];
   }
   [self setButtonTitleForActive:self.entry.isActive];
+  [self.descriptionTextField setStringValue:self.entry.entryDescription];
 }
 
 - (void)setButtonTitleForActive:(BOOL)active {
