@@ -10,7 +10,7 @@
 #import "PopoverManager.h"
 #import "StatusItemManager.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, StatusItemManagerDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, StatusItemManagerDelegate>
 
 @property (strong, nonatomic) PopoverManager *popoverManager;
 @property (weak) IBOutlet NSWindow *detachedWindow;

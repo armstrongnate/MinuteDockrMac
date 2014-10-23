@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MinuteDockCredentialStorage.h"
-#import "MDEntry.h"
 #import "CurrentEntry.h"
 
 @interface AppDelegate ()
@@ -35,6 +34,9 @@
                                                         persistence:NSURLCredentialPersistenceNone];
   [[MinuteDockCredentialStorage sharedCredentialStorage] setCredential:credential];
 }
+
+
+#pragma mark - StatusItemDelegate
 
 - (void)statusItemPressed:(id)sender {
   NSStatusBarButton *button = (NSStatusBarButton *)sender;

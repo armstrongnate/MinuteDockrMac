@@ -13,5 +13,7 @@
 @interface PopoverViewController : NSViewController
 
 @property (nonatomic, strong) MDEntry *entry;
+@property (nonatomic, strong) NSArray *contacts;
+@property (nonatomic, strong) NSArray *projects;
 
 @end

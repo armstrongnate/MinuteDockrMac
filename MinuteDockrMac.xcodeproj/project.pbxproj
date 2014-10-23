@@ -15,6 +15,9 @@
 		432AE3A419F637B700F2EB36 /* NSNull+Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3A319F637B700F2EB36 /* NSNull+Resource.m */; };
 		432AE3AE19F7594000F2EB36 /* StatusItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3AD19F7594000F2EB36 /* StatusItemManager.m */; };
 		432AE3B119F778EA00F2EB36 /* CurrentEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3B019F778EA00F2EB36 /* CurrentEntry.m */; };
+		432AE3B719F83DDB00F2EB36 /* MDContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3B619F83DDB00F2EB36 /* MDContact.m */; };
+		432AE3BD19F84F6400F2EB36 /* MDProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3BC19F84F6400F2EB36 /* MDProject.m */; };
+		432AE3C019F8B38C00F2EB36 /* NSPopUpButton+Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE3BF19F8B38C00F2EB36 /* NSPopUpButton+Resource.m */; };
 		43A8A0C319EE0EEF0068CCDB /* PopoverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */; };
 		43A8A0CD19EE2F270068CCDB /* MDEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A0CC19EE2F270068CCDB /* MDEntry.m */; };
 		43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D8155219ECEE2F00612786 /* PopoverView.xib */; };
@@ -52,6 +55,13 @@
 		432AE3AD19F7594000F2EB36 /* StatusItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemManager.m; sourceTree = "<group>"; };
 		432AE3AF19F778EA00F2EB36 /* CurrentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentEntry.h; sourceTree = "<group>"; };
 		432AE3B019F778EA00F2EB36 /* CurrentEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentEntry.m; sourceTree = "<group>"; };
+		432AE3B519F83DDB00F2EB36 /* MDContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDContact.h; sourceTree = "<group>"; };
+		432AE3B619F83DDB00F2EB36 /* MDContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDContact.m; sourceTree = "<group>"; };
+		432AE3BB19F84F6400F2EB36 /* MDProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDProject.h; sourceTree = "<group>"; };
+		432AE3BC19F84F6400F2EB36 /* MDProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDProject.m; sourceTree = "<group>"; };
+		432AE3BE19F8B38C00F2EB36 /* NSPopUpButton+Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPopUpButton+Resource.h"; sourceTree = "<group>"; };
+		432AE3BF19F8B38C00F2EB36 /* NSPopUpButton+Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPopUpButton+Resource.m"; sourceTree = "<group>"; };
+		432AE3C119F8B51100F2EB36 /* NSMenuItemResourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMenuItemResourceProtocol.h; sourceTree = "<group>"; };
 		43A8A0C119EE0EEF0068CCDB /* PopoverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverManager.h; sourceTree = "<group>"; };
 		43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverManager.m; sourceTree = "<group>"; };
 		43A8A0CB19EE2F270068CCDB /* MDEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDEntry.h; sourceTree = "<group>"; };
@@ -93,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				432AE3A619F7400500F2EB36 /* ActiveSupportInflector */,
+				432AE3A219F637B700F2EB36 /* NSNull+Resource.h */,
+				432AE3A319F637B700F2EB36 /* NSNull+Resource.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -106,6 +118,66 @@
 				432AE39819F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m */,
 			);
 			name = ActiveSupportInflector;
+			sourceTree = "<group>";
+		};
+		432AE3C219F8B60900F2EB36 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				432AE39B19F6070100F2EB36 /* MinuteDockCredentialStorage.h */,
+				432AE39C19F6070100F2EB36 /* MinuteDockCredentialStorage.m */,
+				432AE3AF19F778EA00F2EB36 /* CurrentEntry.h */,
+				432AE3B019F778EA00F2EB36 /* CurrentEntry.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		432AE3C319F8B61B00F2EB36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				432AE3C519F8B67E00F2EB36 /* StatusItem */,
+				432AE3C419F8B62600F2EB36 /* Popover */,
+				43FF92ED19EA18F200435D05 /* MainMenu.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		432AE3C419F8B62600F2EB36 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				43D8155219ECEE2F00612786 /* PopoverView.xib */,
+				43D8155419ECF69D00612786 /* PopoverViewController.h */,
+				43D8155519ECF69D00612786 /* PopoverViewController.m */,
+				43A8A0C119EE0EEF0068CCDB /* PopoverManager.h */,
+				43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */,
+				432AE3BE19F8B38C00F2EB36 /* NSPopUpButton+Resource.h */,
+				432AE3BF19F8B38C00F2EB36 /* NSPopUpButton+Resource.m */,
+				432AE3C119F8B51100F2EB36 /* NSMenuItemResourceProtocol.h */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		432AE3C519F8B67E00F2EB36 /* StatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				432AE3AC19F7594000F2EB36 /* StatusItemManager.h */,
+				432AE3AD19F7594000F2EB36 /* StatusItemManager.m */,
+			);
+			name = StatusItem;
+			sourceTree = "<group>";
+		};
+		432AE3C619F8B6EC00F2EB36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				432AE39019F5F82000F2EB36 /* Resource.h */,
+				432AE39119F5F82000F2EB36 /* Resource.m */,
+				432AE3B519F83DDB00F2EB36 /* MDContact.h */,
+				432AE3B619F83DDB00F2EB36 /* MDContact.m */,
+				43A8A0CB19EE2F270068CCDB /* MDEntry.h */,
+				43A8A0CC19EE2F270068CCDB /* MDEntry.m */,
+				432AE3BB19F84F6400F2EB36 /* MDProject.h */,
+				432AE3BC19F84F6400F2EB36 /* MDProject.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		43FF92D819EA18F200435D05 = {
@@ -129,28 +201,14 @@
 		43FF92E319EA18F200435D05 /* MinuteDockrMac */ = {
 			isa = PBXGroup;
 			children = (
+				432AE3C319F8B61B00F2EB36 /* Views */,
+				432AE3C219F8B60900F2EB36 /* Services */,
 				432AE39419F5FC7700F2EB36 /* Helpers */,
+				432AE3C619F8B6EC00F2EB36 /* Models */,
 				43FF92E619EA18F200435D05 /* AppDelegate.h */,
 				43FF92E719EA18F200435D05 /* AppDelegate.m */,
 				43FF92EB19EA18F200435D05 /* Images.xcassets */,
-				43FF92ED19EA18F200435D05 /* MainMenu.xib */,
-				43D8155419ECF69D00612786 /* PopoverViewController.h */,
-				43D8155519ECF69D00612786 /* PopoverViewController.m */,
-				43A8A0C119EE0EEF0068CCDB /* PopoverManager.h */,
-				43A8A0C219EE0EEF0068CCDB /* PopoverManager.m */,
-				43A8A0CB19EE2F270068CCDB /* MDEntry.h */,
-				43A8A0CC19EE2F270068CCDB /* MDEntry.m */,
-				432AE3A219F637B700F2EB36 /* NSNull+Resource.h */,
-				432AE3A319F637B700F2EB36 /* NSNull+Resource.m */,
-				432AE39019F5F82000F2EB36 /* Resource.h */,
-				432AE39119F5F82000F2EB36 /* Resource.m */,
-				432AE39B19F6070100F2EB36 /* MinuteDockCredentialStorage.h */,
-				432AE39C19F6070100F2EB36 /* MinuteDockCredentialStorage.m */,
 				43FF92E419EA18F200435D05 /* Supporting Files */,
-				432AE3AC19F7594000F2EB36 /* StatusItemManager.h */,
-				432AE3AD19F7594000F2EB36 /* StatusItemManager.m */,
-				432AE3AF19F778EA00F2EB36 /* CurrentEntry.h */,
-				432AE3B019F778EA00F2EB36 /* CurrentEntry.m */,
 			);
 			path = MinuteDockrMac;
 			sourceTree = "<group>";
@@ -161,7 +219,6 @@
 				432AE3A019F624D500F2EB36 /* ActiveSupportInflector.plist */,
 				43FF92E519EA18F200435D05 /* Info.plist */,
 				43FF92E919EA18F200435D05 /* main.m */,
-				43D8155219ECEE2F00612786 /* PopoverView.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,10 +343,13 @@
 			files = (
 				432AE3AE19F7594000F2EB36 /* StatusItemManager.m in Sources */,
 				43D8155619ECF69D00612786 /* PopoverViewController.m in Sources */,
+				432AE3B719F83DDB00F2EB36 /* MDContact.m in Sources */,
 				43A8A0C319EE0EEF0068CCDB /* PopoverManager.m in Sources */,
 				432AE39D19F6070100F2EB36 /* MinuteDockCredentialStorage.m in Sources */,
 				43FF92EA19EA18F200435D05 /* main.m in Sources */,
+				432AE3BD19F84F6400F2EB36 /* MDProject.m in Sources */,
 				432AE39919F5FC8A00F2EB36 /* ActiveSupportInflector.m in Sources */,
+				432AE3C019F8B38C00F2EB36 /* NSPopUpButton+Resource.m in Sources */,
 				432AE3B119F778EA00F2EB36 /* CurrentEntry.m in Sources */,
 				432AE3A419F637B700F2EB36 /* NSNull+Resource.m in Sources */,
 				432AE39A19F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m in Sources */,

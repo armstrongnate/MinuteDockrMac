@@ -14,8 +14,7 @@
   return @"entry";
 }
 
-+ (void)current:(void (^)(Resource *response, NSError *error))block {
-  NSLog(@"in here man");
++ (void)current:(ObjectResourceBlock)block {
   NSString *path = @"entries/current.json";
   [self requestURL:path as:HTTPMethodGet expectArray:NO sendParams:nil withBlock:block];
 }
@@ -25,9 +24,16 @@
     self.unique = [[dictionary objectForKey:@"id"] integerValue];
     self.duration = MDDurationMakeWithSeconds([[dictionary objectForKey:@"duration"] integerValue]);
     self.contactId = [[dictionary objectForKey:@"contact_id"] integerValue];
+    self.projectId = [[dictionary objectForKey:@"project_id"] integerValue];
     self.active = [[dictionary objectForKey:@"timer_active"] boolValue];
+    self.entryDescription = (NSString *)[dictionary objectForKey:@"description"];
   }
   return self;
+}
+
+- (void)resume:(BOOL)active withBlock:(ObjectResourceBlock)block {
+  NSString *path = active ? @"entries/current/start.json" : @"entries/current/pause.json";
+  [[self class] requestURL:path as:HTTPMethodPost expectArray:NO sendParams:@{} withBlock:block];
 }
 
 - (void)tick {
@@ -43,6 +49,19 @@
     minutes = 0;
   }
   self.duration = MDDurationMake(hours, minutes, seconds);
+}
+
+- (NSInteger)durationInSeconds {
+  return (self.duration.hours * 3600) + (self.duration.minutes * 60) + self.duration.minutes;
+}
+
+- (NSDictionary *)safeAttributes {
+  return @{
+    @"contact_id": [NSNumber numberWithInteger:self.contactId],
+    @"project_id": [NSNumber numberWithInteger:self.projectId],
+    @"duration": [NSNumber numberWithInteger:[self durationInSeconds]],
+    @"description": self.entryDescription,
+  };
 }
 
 @end

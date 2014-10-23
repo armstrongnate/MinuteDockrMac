@@ -41,9 +41,13 @@
     } else {
       MDEntry *entry = (MDEntry *)response;
       self.entry = entry;
-      [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentEntryDidUpdate" object:self.entry];
     }
   }];
+}
+
+- (void)setEntry:(MDEntry *)entry {
+  _entry = entry;
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentEntryDidUpdate" object:self.entry];
 }
 
 @end
