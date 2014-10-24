@@ -22,8 +22,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
-  [[MinuteDockCredentialStorage sharedCredentialStorage] removeCredential];
-
   NSURLCredential *credential = [[MinuteDockCredentialStorage sharedCredentialStorage] credential];
   if (credential.hasPassword) {
     [[CurrentEntry sharedInstance] beginRefreshing];
