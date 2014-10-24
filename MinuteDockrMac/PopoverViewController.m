@@ -105,6 +105,8 @@
   [self setButtonTitleForActive:self.entry.isActive];
   if (self.entry.entryDescription != nil) {
     [self.descriptionTextField setStringValue:self.entry.entryDescription];
+  } else {
+    [self.descriptionTextField setStringValue:@""];
   }
 }
 
