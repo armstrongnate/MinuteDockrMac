@@ -112,12 +112,12 @@
   if (contact != nil) {
     NSPredicate *contactPredicate = [NSPredicate predicateWithFormat:@"contactId == %@", [NSNumber numberWithInteger:contact.unique]];
     self.filteredProjects = [self.projects filteredArrayUsingPredicate:contactPredicate];
-    [self.projectSelect removeAllItems];
-    [self.projectSelect addResourceItems:self.filteredProjects];
-    [self.projectSelect selectItemAtIndex:-1];
   } else {
     self.filteredProjects = self.projects;
   }
+  [self.projectSelect removeAllItems];
+  [self.projectSelect addResourceItems:self.filteredProjects];
+  [self.projectSelect selectItemAtIndex:-1];
 }
 
 - (void)tick {
