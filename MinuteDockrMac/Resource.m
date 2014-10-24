@@ -64,7 +64,6 @@ NSString * const kMINUTE_DOCK_API_VERSION = @"v1";
         block(resources, error);
       } else {
         NSDictionary *resourceDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-        NSLog(@"resourceDictionary: %@", resourceDictionary);
         Resource *resource = [[self alloc] initWithDictionary:resourceDictionary];
         block(resource, error);
       }
