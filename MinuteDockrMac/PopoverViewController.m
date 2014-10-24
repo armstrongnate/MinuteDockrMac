@@ -53,20 +53,6 @@
   }
 }
 
-- (void)reset {
-  [self.contactSelect selectItemAtIndex:-1];
-  [self.projectSelect selectItemAtIndex:-1];
-  [self.descriptionTextField setStringValue:@""];
-  MDDuration duration;
-  duration.hours = 0;
-  duration.minutes = 0;
-  duration.seconds = 0;
-  self.entry = [[MDEntry alloc] init];
-  self.entry.duration = duration;
-  self.entry.active = NO;
-  [[CurrentEntry sharedInstance] setEntry:self.entry];
-}
-
 - (IBAction)didSelectContact:(id)sender {
   MDContact *contact = [self selectedContact];
   NSDictionary *attributes = @{
@@ -179,7 +165,8 @@
     if (error == nil) {
       [[CurrentEntry sharedInstance] logWithBlock:^(Resource *response, NSError *error) {
         if (error == nil) {
-          [self reset];
+          self.entry = [[MDEntry alloc] init];
+          [[CurrentEntry sharedInstance] setEntry:self.entry];
         }
       }];
     }
