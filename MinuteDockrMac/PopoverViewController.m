@@ -69,7 +69,11 @@
 
 - (IBAction)didSelectContact:(id)sender {
   MDContact *contact = [self selectedContact];
-  [self.entry updateAttribute:@"contactId" withValue:[NSNumber numberWithInteger:contact.unique] block:self.responseHandler];
+  NSDictionary *attributes = @{
+    @"contactId": [NSNumber numberWithInteger:contact.unique],
+    @"entryDescription": self.descriptionTextField.stringValue,
+  };
+  [self.entry updateAttributes:attributes block:self.responseHandler];
   [self filterProjects];
 }
 
@@ -79,6 +83,7 @@
   NSDictionary *attributes = @{
     @"projectId": [NSNumber numberWithInteger:project.unique],
     @"contactId": [NSNumber numberWithInteger:project.contactId],
+    @"entryDescription": self.descriptionTextField.stringValue,
   };
   [self.entry updateAttributes:attributes block:self.responseHandler];
 }
