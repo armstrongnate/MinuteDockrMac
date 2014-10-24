@@ -19,6 +19,11 @@
   [self requestURL:path as:HTTPMethodGet expectArray:NO sendParams:nil withBlock:block];
 }
 
++ (void)setCurrentActive:(BOOL)active withBlock:(ObjectResourceBlock)block {
+  NSString *path = active ? @"entries/current/start.json" : @"entries/current/pause.json";
+  [self requestURL:path as:HTTPMethodPost expectArray:NO sendParams:@{} withBlock:block];
+}
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
   if (self = [super initWithDictionary:dictionary]) {
     self.unique = [[dictionary objectForKey:@"id"] integerValue];
@@ -26,14 +31,13 @@
     self.contactId = [[dictionary objectForKey:@"contact_id"] integerValue];
     self.projectId = [[dictionary objectForKey:@"project_id"] integerValue];
     self.active = [[dictionary objectForKey:@"timer_active"] boolValue];
-    self.entryDescription = (NSString *)[dictionary objectForKey:@"description"];
+    NSString *description = (NSString *)[dictionary objectForKey:@"description"];
+    if (!(description == (id)[NSNull null]) && ![description isEqualToString:@"<null>"]) {
+      self.entryDescription = (NSString *)[dictionary objectForKey:@"description"];
+    }
+    self.logged = [dictionary objectForKey:@"logged_at"] != (id)[NSNull null];
   }
   return self;
-}
-
-- (void)resume:(BOOL)active withBlock:(ObjectResourceBlock)block {
-  NSString *path = active ? @"entries/current/start.json" : @"entries/current/pause.json";
-  [[self class] requestURL:path as:HTTPMethodPost expectArray:NO sendParams:@{} withBlock:block];
 }
 
 - (void)tick {

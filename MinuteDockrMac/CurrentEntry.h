@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class MDEntry;
+@class Resource;
 
 @interface CurrentEntry : NSObject
 
 @property (nonatomic, strong) MDEntry *entry;
 
 + (instancetype)sharedInstance;
-- (void)start;
+- (void)beginRefreshing;
+- (void)resume:(BOOL)active withBlock:(void (^)(Resource *response, NSError *error))block;
+- (void)logWithBlock:(void (^)(Resource *response, NSError *error))block;
 
 @end

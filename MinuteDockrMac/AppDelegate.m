@@ -9,19 +9,27 @@
 #import "AppDelegate.h"
 #import "MinuteDockCredentialStorage.h"
 #import "CurrentEntry.h"
+#import "LoginWindowController.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property (nonatomic, strong) LoginWindowController *loginWindowController;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  [self login];
 
-  [[CurrentEntry sharedInstance] start];
+  [[MinuteDockCredentialStorage sharedCredentialStorage] removeCredential];
+
+  NSURLCredential *credential = [[MinuteDockCredentialStorage sharedCredentialStorage] credential];
+  if (credential.hasPassword) {
+    [[CurrentEntry sharedInstance] beginRefreshing];
+  } else {
+    [self login];
+  }
 
   self.statusItemManager = [[StatusItemManager alloc] init];
   self.statusItemManager.delegate = self;
@@ -29,10 +37,14 @@
 }
 
 - (void)login {
-  NSURLCredential *credential = [NSURLCredential credentialWithUser:@"username"
-                                                           password:@"password"
-                                                        persistence:NSURLCredentialPersistenceNone];
-  [[MinuteDockCredentialStorage sharedCredentialStorage] setCredential:credential];
+  if (!_loginWindowController) {
+    _loginWindowController = [[LoginWindowController alloc] init];
+  }
+
+  [self.loginWindowController showWindowWithCompletionHandler:^(NSURLCredential *credential) {
+    [[MinuteDockCredentialStorage sharedCredentialStorage] setCredential:credential];
+    [[CurrentEntry sharedInstance] beginRefreshing];
+  }];
 }
 
 

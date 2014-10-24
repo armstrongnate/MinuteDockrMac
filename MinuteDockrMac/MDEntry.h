@@ -37,11 +37,11 @@ static inline MDDuration MDDurationMake(NSUInteger hours, NSUInteger minutes, NS
 @property (assign) NSUInteger contactId;
 @property (assign) NSUInteger projectId;
 @property (getter=isActive, assign) BOOL active;
+@property (getter=isLogged, assign) BOOL logged;
 @property (assign) struct MDDuration duration;
 @property (nonatomic, strong) NSString *entryDescription;
 
 + (void)current:(void (^)(Resource *response, NSError *error))block;
 - (void)tick;
-- (void)resume:(BOOL)active withBlock:(ObjectResourceBlock)block;
 
 @end

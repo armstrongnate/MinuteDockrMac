@@ -32,11 +32,13 @@
   self.entry = [[CurrentEntry sharedInstance] entry];
   [self queryContacts];
   [self queryProjects];
+  __weak PopoverViewController *weakSelf = self;
   self.responseHandler = ^void(Resource *response, NSError *error) {
     if (error != nil) {
       // handle error
     } else {
       MDEntry *entry = (MDEntry *)response;
+      entry.entryDescription = [weakSelf.descriptionTextField stringValue];
       [[CurrentEntry sharedInstance] setEntry:entry];
     }
   };
@@ -49,6 +51,20 @@
     MDEntry *entry = (MDEntry *)notification.object;
     self.entry = entry;
   }
+}
+
+- (void)reset {
+  [self.contactSelect selectItemAtIndex:-1];
+  [self.projectSelect selectItemAtIndex:-1];
+  [self.descriptionTextField setStringValue:@""];
+  MDDuration duration;
+  duration.hours = 0;
+  duration.minutes = 0;
+  duration.seconds = 0;
+  self.entry = [[MDEntry alloc] init];
+  self.entry.duration = duration;
+  self.entry.active = NO;
+  [[CurrentEntry sharedInstance] setEntry:self.entry];
 }
 
 - (IBAction)didSelectContact:(id)sender {
@@ -82,7 +98,9 @@
     [self.projectSelect selectResourceWithTag:self.entry.projectId];
   }
   [self setButtonTitleForActive:self.entry.isActive];
-  [self.descriptionTextField setStringValue:self.entry.entryDescription];
+  if (self.entry.entryDescription != nil) {
+    [self.descriptionTextField setStringValue:self.entry.entryDescription];
+  }
 }
 
 - (void)setButtonTitleForActive:(BOOL)active {
@@ -145,7 +163,19 @@
 
 - (IBAction)startStopButtonPressed:(id)sender {
   [self setButtonTitleForActive:!self.entry.isActive];
-  [self.entry resume:!self.entry.isActive withBlock:self.responseHandler];
+  [[CurrentEntry sharedInstance] resume:!self.entry.isActive withBlock:self.responseHandler];
+}
+
+- (IBAction)logButtonPressed:(id)sender {
+  [self.entry updateAttribute:@"entryDescription" withValue:[self.descriptionTextField stringValue] block:^(Resource *response, NSError *error) {
+    if (error == nil) {
+      [[CurrentEntry sharedInstance] logWithBlock:^(Resource *response, NSError *error) {
+        if (error == nil) {
+          [self reset];
+        }
+      }];
+    }
+  }];
 }
 
 @end

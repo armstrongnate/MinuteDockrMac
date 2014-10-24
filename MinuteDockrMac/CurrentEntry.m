@@ -20,12 +20,12 @@
   return sharedInstance;
 }
 
-- (void)start {
+- (void)beginRefreshing {
   [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"MDCurrentEntryRefreshInterval": @30}];
   NSTimeInterval ti = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MDCurrentEntryRefreshInterval"];
-  [NSTimer scheduledTimerWithTimeInterval:ti target:self selector:@selector(getCurrentEntry:) userInfo:nil repeats:YES];
+  [NSTimer scheduledTimerWithTimeInterval:ti target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
   [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tickCurrentEntry:) userInfo:nil repeats:YES];
-  [self getCurrentEntry:nil];
+  [self refresh:nil];
 }
 
 - (void)tickCurrentEntry:(id)sender {
@@ -34,7 +34,7 @@
   }
 }
 
-- (void)getCurrentEntry:(id)sender {
+- (void)refresh:(id)sender {
   [MDEntry current:^(Resource *response, NSError *error) {
     if (error != nil) {
       NSLog(@"Error: %@", error);
@@ -43,6 +43,16 @@
       self.entry = entry;
     }
   }];
+}
+
+- (void)resume:(BOOL)active withBlock:(ObjectResourceBlock)block {
+  NSString *path = active ? @"entries/current/start.json" : @"entries/current/pause.json";
+  [MDEntry requestURL:path as:HTTPMethodPost expectArray:NO sendParams:@{} withBlock:block];
+}
+
+- (void)logWithBlock:(ObjectResourceBlock)block {
+  NSString *path = @"entries/current/log.json";
+  [MDEntry requestURL:path as:HTTPMethodPost expectArray:NO sendParams:@{} withBlock:block];
 }
 
 - (void)setEntry:(MDEntry *)entry {

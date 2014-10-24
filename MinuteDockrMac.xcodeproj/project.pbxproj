@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432AA0B819FA0D2D004813D5 /* LoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AA0B719FA0D2D004813D5 /* LoginWindowController.m */; };
+		432AA0BA19FA0D48004813D5 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432AA0B919FA0D48004813D5 /* LoginWindow.xib */; };
 		432AE39219F5F82000F2EB36 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39119F5F82000F2EB36 /* Resource.m */; };
 		432AE39919F5FC8A00F2EB36 /* ActiveSupportInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39619F5FC8A00F2EB36 /* ActiveSupportInflector.m */; };
 		432AE39A19F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AE39819F5FC8A00F2EB36 /* NSString+ActiveSupportInflector.m */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		432AA0B619FA0D2D004813D5 /* LoginWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWindowController.h; sourceTree = "<group>"; };
+		432AA0B719FA0D2D004813D5 /* LoginWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWindowController.m; sourceTree = "<group>"; };
+		432AA0B919FA0D48004813D5 /* LoginWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
 		432AE39019F5F82000F2EB36 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		432AE39119F5F82000F2EB36 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
 		432AE39519F5FC8A00F2EB36 /* ActiveSupportInflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveSupportInflector.h; sourceTree = "<group>"; };
@@ -99,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432AA0B319FA0CAB004813D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				432AA0B619FA0D2D004813D5 /* LoginWindowController.h */,
+				432AA0B719FA0D2D004813D5 /* LoginWindowController.m */,
+				432AA0B919FA0D48004813D5 /* LoginWindow.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		432AE39419F5FC7700F2EB36 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 		432AE3C319F8B61B00F2EB36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				432AA0B319FA0CAB004813D5 /* Login */,
 				432AE3C519F8B67E00F2EB36 /* StatusItem */,
 				432AE3C419F8B62600F2EB36 /* Popover */,
 				43FF92ED19EA18F200435D05 /* MainMenu.xib */,
@@ -321,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43FF92EC19EA18F200435D05 /* Images.xcassets in Resources */,
+				432AA0BA19FA0D48004813D5 /* LoginWindow.xib in Resources */,
 				432AE3A119F624D500F2EB36 /* ActiveSupportInflector.plist in Resources */,
 				43FF92EF19EA18F200435D05 /* MainMenu.xib in Resources */,
 				43D8155319ECEE2F00612786 /* PopoverView.xib in Resources */,
@@ -348,6 +365,7 @@
 				432AE39D19F6070100F2EB36 /* MinuteDockCredentialStorage.m in Sources */,
 				43FF92EA19EA18F200435D05 /* main.m in Sources */,
 				432AE3BD19F84F6400F2EB36 /* MDProject.m in Sources */,
+				432AA0B819FA0D2D004813D5 /* LoginWindowController.m in Sources */,
 				432AE39919F5FC8A00F2EB36 /* ActiveSupportInflector.m in Sources */,
 				432AE3C019F8B38C00F2EB36 /* NSPopUpButton+Resource.m in Sources */,
 				432AE3B119F778EA00F2EB36 /* CurrentEntry.m in Sources */,

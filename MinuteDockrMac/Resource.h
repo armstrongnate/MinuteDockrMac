@@ -29,6 +29,7 @@ typedef enum {
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (void)updateAttribute:(NSString *)attribute withValue:(id)value block:(void (^)(Resource *response, NSError *error))block;
 - (void)updateAttributes:(NSDictionary *)attributes block:(void (^)(Resource *response, NSError *error))block;
+- (NSDictionary *)safeAttributes;
 
 @end
 
