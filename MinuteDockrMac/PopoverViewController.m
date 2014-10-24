@@ -108,6 +108,7 @@
   } else {
     [self.descriptionTextField setStringValue:@""];
   }
+  [self tick];
 }
 
 - (void)setButtonTitleForActive:(BOOL)active {
