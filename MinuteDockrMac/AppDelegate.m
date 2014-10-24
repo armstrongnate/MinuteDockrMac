@@ -31,7 +31,7 @@
 
   self.statusItemManager = [[StatusItemManager alloc] init];
   self.statusItemManager.delegate = self;
-  self.popoverManager = [[PopoverManager alloc] initWithPopoverViewController:self.popoverViewController detachedWindow:self.detachedWindow];
+  self.popoverManager = [[PopoverManager alloc] initWithDetachedWindow:self.detachedWindow];
 }
 
 - (void)login {

@@ -27,9 +27,18 @@
 
 @implementation PopoverViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    [[CurrentEntry sharedInstance] refreshWithBlock:^(Resource *response, NSError *error) {
+      MDEntry *entry = (MDEntry *)response;
+      self.entry = entry;
+    }];
+  }
+  return self;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.entry = [[CurrentEntry sharedInstance] entry];
   [self queryContacts];
   [self queryProjects];
   __weak PopoverViewController *weakSelf = self;
@@ -38,19 +47,11 @@
       // handle error
     } else {
       MDEntry *entry = (MDEntry *)response;
-      entry.entryDescription = [weakSelf.descriptionTextField stringValue];
-      [[CurrentEntry sharedInstance] setEntry:entry];
+      weakSelf.entry = entry;
+      [[CurrentEntry sharedInstance] setEntry:weakSelf.entry];
     }
   };
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentEntryDidUpdate:) name:@"CurrentEntryDidUpdate" object:nil];
   [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
-}
-
-- (void)currentEntryDidUpdate:(NSNotification *)notification {
-  if ([notification.name isEqualToString:@"CurrentEntryDidUpdate"]) {
-    MDEntry *entry = (MDEntry *)notification.object;
-    self.entry = entry;
-  }
 }
 
 - (IBAction)didSelectContact:(id)sender {

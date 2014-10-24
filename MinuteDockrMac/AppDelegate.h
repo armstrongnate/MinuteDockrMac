@@ -14,7 +14,6 @@
 
 @property (strong, nonatomic) PopoverManager *popoverManager;
 @property (weak) IBOutlet NSWindow *detachedWindow;
-@property (weak) IBOutlet PopoverViewController *popoverViewController;
 @property (nonatomic, strong) StatusItemManager *statusItemManager;
 
 @end

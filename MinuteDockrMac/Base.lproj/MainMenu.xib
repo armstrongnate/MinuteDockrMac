@@ -14,7 +14,6 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="detachedWindow" destination="I7k-cn-aA7" id="FYX-jy-E0U"/>
-                <outlet property="popoverViewController" destination="RpR-Rv-xus" id="VyX-2F-JWq"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -689,6 +688,5 @@
             </view>
             <point key="canvasLocation" x="271" y="751"/>
         </window>
-        <viewController nibName="PopoverView" id="RpR-Rv-xus" userLabel="PopoverViewController" customClass="PopoverViewController"/>
     </objects>
 </document>

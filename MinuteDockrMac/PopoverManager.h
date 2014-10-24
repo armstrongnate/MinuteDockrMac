@@ -16,6 +16,6 @@
 @property (strong) NSPopover *popover;
 
 - (void)showPopoverRelativeToRect:(NSRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(NSRectEdge)preferredEdge;
-- (instancetype)initWithPopoverViewController:(PopoverViewController *)popoverViewController detachedWindow:(NSWindow *)detachedWindow;
+- (instancetype)initWithDetachedWindow:(NSWindow *)detachedWindow;
 
 @end

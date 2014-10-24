@@ -19,5 +19,6 @@
 - (void)beginRefreshing;
 - (void)resume:(BOOL)active withBlock:(void (^)(Resource *response, NSError *error))block;
 - (void)logWithBlock:(void (^)(Resource *response, NSError *error))block;
+- (void)refreshWithBlock:(void (^)(Resource *response, NSError *error))block;
 
 @end

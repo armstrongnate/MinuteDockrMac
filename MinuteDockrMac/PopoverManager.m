@@ -12,10 +12,9 @@
 @implementation PopoverManager
 
 
-- (instancetype)initWithPopoverViewController:(PopoverViewController *)popoverViewController detachedWindow:(NSWindow *)detachedWindow {
+- (instancetype)initWithDetachedWindow:(NSWindow *)detachedWindow {
   self = [super init];
   if (self) {
-    self.popoverViewController = popoverViewController;
     self.detachedWindow = detachedWindow;
     [self createPopover];
   }
@@ -25,7 +24,6 @@
 - (void)createPopover {
   if (self.popover == nil) {
     self.popover = [[NSPopover alloc] init];
-    self.popover.contentViewController = self.popoverViewController;
     self.popover.animates = NO;
     self.popover.behavior = NSPopoverBehaviorTransient;
     self.popover.delegate = self;
@@ -37,6 +35,8 @@
 }
 
 - (void)showPopoverRelativeToRect:(NSRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(NSRectEdge)preferredEdge {
+  PopoverViewController *popoverViewController = [[PopoverViewController alloc] initWithNibName:@"PopoverView" bundle:nil];
+  self.popover.contentViewController = popoverViewController;
   [self.popover showRelativeToRect:positioningRect ofView:positioningView preferredEdge:preferredEdge];
 }
 

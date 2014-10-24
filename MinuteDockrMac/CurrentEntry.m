@@ -35,12 +35,19 @@
 }
 
 - (void)refresh:(id)sender {
+  [self refreshWithBlock:nil];
+}
+
+- (void)refreshWithBlock:(void (^)(Resource *response, NSError *error))block; {
   [MDEntry current:^(Resource *response, NSError *error) {
     if (error != nil) {
       NSLog(@"Error: %@", error);
     } else {
       MDEntry *entry = (MDEntry *)response;
       self.entry = entry;
+      if (block != nil) {
+        block(entry, error);
+      }
     }
   }];
 }
