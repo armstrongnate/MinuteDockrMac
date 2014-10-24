@@ -63,7 +63,6 @@
   return @{
     @"contact_id": [NSNumber numberWithInteger:self.contactId],
     @"project_id": [NSNumber numberWithInteger:self.projectId],
-    @"duration": [NSNumber numberWithInteger:[self durationInSeconds]],
     @"description": self.entryDescription,
   };
 }
