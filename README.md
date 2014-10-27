@@ -1,4 +1,5 @@
 MinuteDockr for Mac
 ===================
 
-![screenshot](MinuteDockrMac/screenshots/screenshot.png)
+![screenshot](MinuteDockrMac/screenshots/dark.png)
+![screenshot](MinuteDockrMac/screenshots/light.png)
